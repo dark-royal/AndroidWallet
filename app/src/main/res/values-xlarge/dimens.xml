@@ -1,5 +1,5 @@
 <resources>
-    <dimen name="text_size_normal">35sp</dimen>
-    <dimen name="app_name">38sp</dimen>
-    <dimen name="welcome_to">38sp</dimen>
+    <dimen name="fund">44sp</dimen>
+    <dimen name="welcome_to">35sp</dimen>
+    <dimen name="easy_access_to">25sp</dimen>
 </resources>

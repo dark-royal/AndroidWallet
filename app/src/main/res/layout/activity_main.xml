@@ -15,8 +15,8 @@
                   app:layout_constraintTop_toTopOf="parent"
                   app:layout_constraintHorizontal_bias="0.498" app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintVertical_bias="0.448" android:gravity="center">
-        <ImageView android:layout_width="106dp"
-                   android:layout_height="98dp"
+        <ImageView android:layout_width="@dimen/square_wight"
+                   android:layout_height="@dimen/square_height"
                    android:contentDescription="LOGO" tools:srcCompat="@drawable/wallet_logo"
                    android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
                    android:layout_marginBottom="20dp"
@@ -37,7 +37,7 @@
                 android:layout_width="212dp"
                 android:layout_height="22dp" android:id="@+id/textView1"
                 android:textAlignment="center" android:textAllCaps="true"
-                android:fontFamily="sans-serif-black" android:textColor="#FFFFFF" android:textSize="20sp"
+                android:fontFamily="sans-serif-black" android:textColor="#FFFFFF" android:textSize="@dimen/easy_access_to"
         />
         <TextView
                 android:text="FUNDS"
@@ -45,13 +45,13 @@
                 android:layout_height="wrap_content" android:id="@+id/textView2"
                 android:textAlignment="center" android:textAllCaps="true"
                 android:fontFamily="sans-serif-black" android:textColor="#FFFFFF" android:textStyle="bold"
-                android:textSize="35sp"/>
+                android:textSize="@dimen/fund"/>
     </LinearLayout>
     <TextView
             android:text="Welcome to EasyFunds for Humanity"
             android:layout_width="309dp"
             android:layout_height="86dp" android:id="@+id/textView3"
-            android:textColor="#050505" android:textSize="28sp"
+            android:textColor="#050505" android:textSize="@dimen/welcome_to"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"

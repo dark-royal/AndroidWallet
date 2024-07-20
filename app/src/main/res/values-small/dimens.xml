@@ -1,5 +1,7 @@
 <resources>
-    <dimen name="text_size_normal">35sp</dimen>
-    <dimen name="app_name">38sp</dimen>
-    <dimen name="welcome_to">38sp</dimen>
+    <dimen name="fund">30sp</dimen>
+    <dimen name="welcome_to">24sp</dimen>
+    <dimen name="easy_access_to">17sp</dimen>
+    <dimen name="square_wight">90dp</dimen>
+    <dimen name="square_height">83dp</dimen>
 </resources>
