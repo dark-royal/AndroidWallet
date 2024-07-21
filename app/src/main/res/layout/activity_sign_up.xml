@@ -7,142 +7,184 @@
         android:layout_height="match_parent"
         tools:context=".SignUpActivity" android:layout_gravity="center_horizontal">
 
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:id="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintVertical_bias="0.001">
+
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"/>
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"/>
+    </LinearLayout>
+
+    <TextView
+            android:text="Create Your Account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            android:textSize="@dimen/tv_create_you_acc" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.021"/>
+
+
     <Button
             android:text="Sign Up"
             android:layout_width="363dp"
             android:layout_height="45dp" android:id="@+id/button"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:textSize="16sp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" app:layout_constraintVertical_bias="0.232"/>
+            android:layout_marginBottom="108dp" app:layout_constraintTop_toBottomOf="@+id/checkBox"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.267" android:id="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.267"
+            android:id="@+id/ll_confirmpassword"
             app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="216dp">
         <TextView
                 android:text="Confirm Password"
                 android:layout_width="394dp"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:textColor="#000000"
-                android:textSize="16sp"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_confirmpassword" android:textColor="#000000"
+                android:textSize="@dimen/tv_identifier"
+                android:layout_marginBottom="5dp"/>
+
         <EditText
                 android:layout_width="374dp"
                 android:layout_height="40dp"
                 android:inputType="text|textPassword"
                 android:ems="10"
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/et_confirmpassword"
                 android:autofillHints=""
                 android:hint="    ***************"
                 android:background="@drawable/edit_text_radius"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.267" android:id="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.267"
+            android:id="@+id/ll_password"
             app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="300dp">
         <TextView
                 android:text="Password"
                 android:layout_width="394dp"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:textColor="#000000"
-                android:textSize="16sp"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_password" android:textColor="#000000"
+                android:textSize="@dimen/tv_identifier"
+                android:layout_marginBottom="5dp"/>
+
         <EditText
-                android:layout_width="374dp"
+                android:layout_width="et_wight"
                 android:layout_height="40dp"
                 android:inputType="text|textPassword"
                 android:ems="10"
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/et_password"
                 android:autofillHints=""
                 android:hint="    ***************"
                 android:background="@drawable/edit_text_radius"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.026" android:layout_marginBottom="384dp">
+            app:layout_constraintVertical_bias="0.026" android:layout_marginBottom="384dp" android:id="@+id/ll_email"
+            android:layout_marginTop="13dp" app:layout_constraintTop_toBottomOf="@+id/ll_name">
         <TextView
                 android:text="Email"
                 android:layout_width="394dp"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:textColor="#000000"
-                android:textSize="16sp"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_email" android:textColor="#000000"
+                android:textSize="@dimen/tv_identifier"
+                android:layout_marginBottom="5dp"/>
+
         <EditText
                 android:layout_width="374dp"
                 android:layout_height="40dp"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/et_email"
                 android:autofillHints=""
                 android:hint="    ex: example12@gmail.com"
                 android:background="@drawable/edit_text_radius"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.026" android:layout_marginBottom="468dp">
+            app:layout_constraintVertical_bias="0.026" android:layout_marginBottom="468dp"
+            android:layout_marginTop="1dp" app:layout_constraintTop_toBottomOf="@+id/textView5"
+            android:id="@+id/ll_name">
         <TextView
                 android:text="Name"
                 android:layout_width="394dp"
-                android:layout_height="wrap_content" android:id="@+id/textView4" android:textColor="#000000"
-                android:textSize="16sp"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_name"
+                android:textColor="#000000"
+                android:textSize="@dimen/tv_identifier"
+                android:layout_marginBottom="5dp"/>
         <EditText
                 android:layout_width="374dp"
                 android:layout_height="40dp"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/et_name"
                 android:autofillHints=""
                 android:hint="    ex: John Nolan"
                 android:background="@drawable/edit_text_radius"/>
+
     </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="406dp"
-            android:layout_height="59dp" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintVertical_bias="0.001" android:id="@+id/linearLayout2">
-        <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button2" android:layout_gravity="start"/>
-        <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button3" android:layout_gravity="end"/>
-    </LinearLayout>
-    <TextView
-            android:text="Create Your Account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView5"
-            android:textSize="34sp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:layout_marginTop="76dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.158"/>
+
     <CheckBox
             android:text="I'understand the terms &amp; policy"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/checkBox" tools:layout_editor_absoluteY="526dp"
-            tools:layout_editor_absoluteX="28dp"/>
+            android:layout_height="wrap_content" android:id="@+id/checkBox"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.134" app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="@dimen/tv_identifier"
+            android:layout_marginBottom="156dp"/>
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="414dp"
-            android:layout_height="33dp" tools:layout_editor_absoluteY="646dp" tools:layout_editor_absoluteX="2dp"
-            android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:gravity="center" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="88dp"
+            app:layout_constraintTop_toBottomOf="@+id/button">
         <TextView
-                android:text="Allready have an account"
+                android:text="Allready have an account  "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView8" tools:layout_editor_absoluteY="651dp"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
