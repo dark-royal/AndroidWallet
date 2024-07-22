@@ -44,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.28"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:layout_marginTop="100dp"
             android:layout_marginBottom="19dp" app:layout_constraintBottom_toTopOf="@+id/ll_name"
-            app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintVertical_bias="1.0" android:textColor="#000000"/>
     <Button
             android:text="Sign Up"
             android:layout_width="327dp"
@@ -80,7 +80,7 @@
                 android:id="@+id/et_confirmpassword"
                 android:autofillHints=""
                 android:hint="    ***************"
-                android:background="@drawable/edit_text_radius"/>
+                android:background="@drawable/edit_text_radius" android:textColor="#000000"/>
     </LinearLayout>
 
     <LinearLayout
@@ -110,7 +110,7 @@
                 android:id="@+id/et_email"
                 android:autofillHints=""
                 android:hint="    ex: example12@gmail.com"
-                android:background="@drawable/edit_text_radius"/>
+                android:background="@drawable/edit_text_radius" android:textColor="#000000"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
@@ -138,7 +138,7 @@
                 android:id="@+id/et_name"
                 android:autofillHints=""
                 android:hint="    ex: John Nolan"
-                android:background="@drawable/edit_text_radius"/>
+                android:background="@drawable/edit_text_radius" android:textColor="#000000"/>
 
     </LinearLayout>
     <CheckBox
@@ -148,7 +148,7 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.13"
             android:textSize="@dimen/tv_identifier"
-            app:layout_constraintTop_toBottomOf="@+id/ll_confirmpassword"/>
+            app:layout_constraintTop_toBottomOf="@+id/ll_confirmpassword" android:textColor="#000000"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
