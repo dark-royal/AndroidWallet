@@ -20,10 +20,11 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0">
 
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2"/>
+                android:onClick="back"
+                android:id="@+id/button2" app:icon="@drawable/back_icon"
+                app:iconTint="#050505" android:backgroundTint="@android:color/transparent"/>
 
         <Space
                 android:layout_width="0dp"
@@ -31,10 +32,11 @@
                 android:layout_weight="1"/>
 
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button3"/>
+                android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
+                android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
+                app:iconGravity="end"/>
     </LinearLayout>
     <TextView
             android:text="Create Your Account"

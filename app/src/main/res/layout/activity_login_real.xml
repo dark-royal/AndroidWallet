@@ -9,16 +9,17 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="86dp"
-            android:layout_height="57dp"
+            android:layout_width="135dp"
+            android:layout_height="86dp"
             android:id="@+id/linearLayout" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.111">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.106">
         <ImageView
-                android:layout_width="61dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_launcher_foreground"
-                android:id="@+id/imageView" android:layout_weight="1" android:layout_margin="10dp"/>
+                android:layout_width="72dp"
+                android:layout_height="64dp" app:srcCompat="@drawable/wallet_logo_edited"
+                android:id="@+id/imageView" android:layout_weight="1" android:layout_margin="10dp"
+                android:layout_gravity="center"/>
     </LinearLayout>
     <TextView
             android:text="Sign in Your Account"
@@ -27,7 +28,7 @@
             android:textColor="#000000" android:textSize="34sp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" android:layout_marginTop="48dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.031" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.163"/>
     <LinearLayout
             android:orientation="vertical"
@@ -79,6 +80,7 @@
                 android:id="@+id/editTextTextEmailAddress"
                 android:autofillHints=""
                 android:hint="    ***************"
+                android:drawableRight="@drawable/not_visible"
                 android:background="@drawable/edit_text_radius"/>
     </LinearLayout>
     <Button

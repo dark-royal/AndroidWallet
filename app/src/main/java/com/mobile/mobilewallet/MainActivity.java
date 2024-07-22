@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
         }else {
             intent = new Intent(this, SignUpActivity.class);
         }
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         startActivity(intent);
     }
 }

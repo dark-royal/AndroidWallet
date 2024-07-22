@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SignUpActivity" android:layout_gravity="center_horizontal" android:background="#FFFFFF">
+        tools:context=".SignUpActivity" android:layout_gravity="center_horizontal" android:background="#FFFFFF"
+        android:onClick="back">
 
 
     <LinearLayout
@@ -20,10 +21,11 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0">
 
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button2"/>
+                android:id="@+id/button2" app:icon="@drawable/back_icon"
+                app:iconTint="#050505" android:backgroundTint="@android:color/transparent" android:onClick="back"/>
+
 
         <Space
                 android:layout_width="0dp"
@@ -31,10 +33,11 @@
                 android:layout_weight="1"/>
 
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button3"/>
+                android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
+                android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
+                app:iconGravity="end"/>
     </LinearLayout>
     <TextView
             android:text="Create Your Account"
@@ -80,7 +83,8 @@
                 android:id="@+id/et_confirmpassword"
                 android:autofillHints=""
                 android:hint="    ***************"
-                android:background="@drawable/edit_text_radius" android:textColor="#000000"/>
+                android:background="@drawable/edit_text_radius" android:textColor="#000000"
+                android:drawableRight="@drawable/not_visible"/>
     </LinearLayout>
 
     <LinearLayout
@@ -138,7 +142,8 @@
                 android:id="@+id/et_name"
                 android:autofillHints=""
                 android:hint="    ex: John Nolan"
-                android:background="@drawable/edit_text_radius" android:textColor="#000000"/>
+                android:background="@drawable/edit_text_radius" android:textColor="#000000"
+        />
 
     </LinearLayout>
     <CheckBox
