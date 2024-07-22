@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity">
+        tools:context=".LoginActivity" android:background="#FDFDFD">
 
     <LinearLayout
             android:orientation="horizontal"
@@ -31,7 +31,7 @@
             app:layout_constraintHorizontal_bias="0.163"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -40,14 +40,15 @@
             android:id="@+id/linearLayout3">
         <TextView
                 android:text="Email"
-                android:layout_width="394dp"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_email" android:textColor="#000000"
                 android:textSize="16sp"
                 android:layout_marginBottom="5dp"/>
 
         <EditText
-                android:layout_width="374dp"
+                android:layout_width="327dp"
                 android:layout_height="40dp"
                 android:inputType="textEmailAddress"
                 android:ems="10"
@@ -58,7 +59,7 @@
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,11 +69,12 @@
             app:layout_constraintBottom_toTopOf="@+id/button" app:layout_constraintVertical_bias="0.006">
         <TextView
                 android:text="Password"
-                android:layout_width="394dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/tv_password" android:textColor="#000000"
                 android:textSize="16sp"/>
         <EditText
-                android:layout_width="374dp"
+                android:layout_width="327dp"
                 android:layout_height="40dp"
                 android:inputType="text|textPassword"
                 android:ems="10"
@@ -83,7 +85,7 @@
     </LinearLayout>
     <Button
             android:text="Sign In"
-            android:layout_width="363dp"
+            android:layout_width="327dp"
             android:layout_height="45dp" android:id="@+id/button"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:textSize="16sp"

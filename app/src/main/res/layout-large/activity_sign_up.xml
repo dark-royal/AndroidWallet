@@ -47,8 +47,8 @@
             app:layout_constraintVertical_bias="1.0"/>
     <Button
             android:text="Sign Up"
-            android:layout_width="@dimen/et_wight"
-            android:layout_height="@dimen/et_height" android:id="@+id/button"
+            android:layout_width="621dp"
+            android:layout_height="43dp" android:id="@+id/button"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@+id/checkBox"
@@ -73,7 +73,7 @@
                 android:layout_marginBottom="5dp"/>
 
         <EditText
-                android:layout_width="@dimen/et_wight"
+                android:layout_width="640dp"
                 android:layout_height="@dimen/et_height"
                 android:inputType="text|textPassword"
                 android:ems="10"
@@ -103,7 +103,7 @@
                 android:layout_marginBottom="5dp"/>
 
         <EditText
-                android:layout_width="@dimen/et_wight"
+                android:layout_width="638dp"
                 android:layout_height="@dimen/et_height"
                 android:inputType="textEmailAddress"
                 android:ems="10"
@@ -114,8 +114,8 @@
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="670dp"
+            android:layout_height="89dp"
             android:gravity="center" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -127,11 +127,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_name"
                 android:textColor="#000000"
-               android:layout_marginLeft="5dp"
+                android:layout_marginLeft="5dp"
                 android:textSize="@dimen/tv_identifier"
                 android:layout_marginBottom="5dp"/>
         <EditText
-                android:layout_width="@dimen/et_wight"
+                android:layout_width="642dp"
                 android:layout_height="@dimen/et_height"
                 android:inputType="textEmailAddress"
                 android:ems="10"

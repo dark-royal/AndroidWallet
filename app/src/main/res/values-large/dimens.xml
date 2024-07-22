@@ -4,4 +4,11 @@
     <dimen name="easy_access_to">23sp</dimen>
     <dimen name="square_wight">121dp</dimen>
     <dimen name="square_height">112dp</dimen>
+
+    <dimen name="tv_identifier">18sp</dimen>
+    <dimen name="tv_create_you_acc">39sp</dimen>
+<!--    <dimen name="et_wight">400dp</dimen>-->
+    <dimen name="et_wight">375dp</dimen>
+    <dimen name="et_height">46dp</dimen>
+    <dimen name="already_have">16sp</dimen>
 </resources>

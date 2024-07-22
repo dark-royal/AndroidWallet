@@ -13,5 +13,6 @@
     <dimen name="tv_create_you_acc">34sp</dimen>
     <dimen name="et_wight">374dp</dimen>
     <dimen name="et_height">40dp</dimen>
+    <dimen name="already_have">14sp</dimen>
 
 </resources>
