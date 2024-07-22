@@ -23,8 +23,10 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:id="@+id/button2" app:icon="@drawable/back_icon"
-                app:iconTint="#050505" android:backgroundTint="@android:color/transparent" android:onClick="back"/>
+                app:iconTint="#050505" android:backgroundTint="@android:color/transparent" android:onClick="back"
+        />
 
 
         <Space
@@ -37,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
                 android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
-                app:iconGravity="end"/>
+                app:iconGravity="end" android:foreground="@drawable/border_radius_colour"/>
     </LinearLayout>
     <TextView
             android:text="Create Your Account"

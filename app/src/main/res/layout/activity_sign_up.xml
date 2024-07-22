@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
                 android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
-                app:iconGravity="end"/>
+                app:iconGravity="end" android:foreground="@drawable/border_radius_colour"/>
     </LinearLayout>
     <TextView
             android:text="Create Your Account"

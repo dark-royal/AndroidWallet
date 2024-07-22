@@ -38,8 +38,8 @@
                             android:textColor="#FDFCFC"/>
                     <ImageView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/button4" android:layout_weight="1"
-                            android:contentDescription="TODO" app:srcCompat="@drawable/back_icon"/>
+                            android:layout_height="match_parent" android:id="@+id/button4" android:layout_weight="1"
+                            android:contentDescription="TODO" app:srcCompat="@drawable/settings"/>
                 </LinearLayout>
                 <TextView
                         android:text="Name"
@@ -57,7 +57,7 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="370dp"
                     android:layout_height="215dp" android:background="@drawable/border_radius"
                     android:backgroundTint="#45279D">
                 <TextView
@@ -65,13 +65,14 @@
                         android:gravity="center_vertical"
                         android:textAlignment="center"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textView11" android:textColor="#A29B9B"/>
+                        android:layout_height="wrap_content" android:id="@+id/textView11" android:textColor="#A29B9B"
+                        android:textSize="16sp"/>
                 <TextView
                         android:text="$14,233.00"
                         android:layout_width="match_parent"
                         android:textAlignment="center"
                         android:layout_height="wrap_content" android:id="@+id/textView12" android:textColor="#FFFFFF"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" android:textSize="35sp"/>
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="393dp"
@@ -81,19 +82,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/button5" android:layout_weight="1"
                             android:background="@android:color/transparent" app:icon="@drawable/download_up"
-                            android:drawableTop="@drawable/download_up" app:iconGravity="top" app:iconSize="16dp"/>
+                            android:drawableTop="@drawable/download_up" app:iconGravity="top" app:iconSize="16dp"
+                            android:textSize="16sp"/>
                     <Button
                             android:text="Withdraw"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/button6" android:layout_weight="1"
                             app:iconGravity="top" app:icon="@drawable/withdraw_icon" app:iconSize="16dp"
-                            android:background="@android:color/transparent"/>
+                            android:background="@android:color/transparent" android:textSize="16sp"/>
                     <Button
                             android:text="Transfer"
                             android:layout_width="89dp"
                             android:layout_height="wrap_content" android:id="@+id/button7" android:layout_weight="1"
                             app:icon="@drawable/transfer" app:iconGravity="top"
-                            android:background="@android:color/transparent"/>
+                            android:background="@android:color/transparent" android:textSize="16sp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -117,7 +119,7 @@
             app:layout_constraintHorizontal_bias="0.0"/>
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="411dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:id="@+id/linearLayout5" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
@@ -135,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button8"
                 android:background="@android:color/transparent" android:hapticFeedbackEnabled="true"
-                android:textColor="#403F3F"/>
+                android:textColor="#403F3F" android:textSize="16sp"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
@@ -151,7 +153,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout5" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintVertical_bias="0.0"/>
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="79dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="3dp"
@@ -163,26 +165,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button9"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" app:icon="@drawable/home" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
         <Button
                 android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button10"
                 app:layout_constraintStart_toEndOf="@+id/button9" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.044" app:layout_constraintVertical_bias="0.483"/>
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintVertical_bias="0.483"  app:icon="@drawable/home" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
         <Button
                 android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button11"
                 app:layout_constraintStart_toEndOf="@+id/button10" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.516"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.095"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.095" app:icon="@drawable/home" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
         <Button
                 android:text="Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button12"
                 app:layout_constraintStart_toEndOf="@+id/button11" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"  app:icon="@drawable/home" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
