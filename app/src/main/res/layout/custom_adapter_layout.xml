@@ -49,7 +49,7 @@
                     android:id="@+id/imageView4"/>
             <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="178dp"
+                    android:layout_width="160dp"
                     android:layout_height="match_parent">
                 <TextView
                         android:text="Top Up"
@@ -63,22 +63,25 @@
                         android:layout_gravity="bottom"
                         android:gravity="bottom"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:id="@+id/textView16"/>
+                        android:layout_height="wrap_content" android:id="@+id/textView16"/>
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:gravity="right|center_vertical"
                     android:layout_gravity="left"
                     android:textSize="25sp"
-                    android:layout_width="149dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                <TextView
-                        android:text="-₦35.23     "
-                        app:icon_gravity="right"
+                <Button
+                        android:text="-₦35.23"
+                        app:iconGravity="textEnd"
+                        app:iconTint="@color/black"
+                        android:gravity="left"
                         app:icon="@drawable/arrow"
                         android:textSize="25sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/textView17"/>
+                        android:layout_height="wrap_content" android:id="@+id/textView17"
+                        android:background="@android:color/transparent" android:textColor="#000000"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
