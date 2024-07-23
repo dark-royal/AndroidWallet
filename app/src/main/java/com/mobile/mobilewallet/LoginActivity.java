@@ -2,13 +2,20 @@ package com.mobile.mobilewallet;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
     HelperClass helperClass;
@@ -21,18 +28,32 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_real);
         helperClass = new HelperClass();
+        etPassword = findViewById(R.id.editTextPassword);
 
 
         Button signup = findViewById(R.id.button);
         signup.setOnClickListener(x->{
             boolean isValid = throwEmptyNessError(new int[]{R.id.editTextPassword, R.id.et_EmailAddress});
             if (isValid){
-                Intent intent = new Intent(this, DashboardActivity.class);
-                startActivity(intent);
+                SharedPreferences sp = getSharedPreferences("userLoginStatus", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                String userStr = sp.getString("user", null);
+                if (userStr != null) {
+                    Gson gson = new Gson();
+                    Type type = new TypeToken<HashMap<String, String>>() {}.getType();
+                    HashMap<String, String> user = gson.fromJson(userStr, type);
+                    user.replace("userLoginStatus", String.valueOf(true));
+                    editor.putString("user", gson.toJson(user));
+                    editor.apply();
+                    Intent intent = new Intent(this, DashboardActivity.class);
+                    intent.putExtra("user", gson.toJson(user));
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(this, "you dont have an account", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
-        etPassword = findViewById(R.id.editTextPassword);
         etPassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

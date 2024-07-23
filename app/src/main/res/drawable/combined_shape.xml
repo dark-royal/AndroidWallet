@@ -9,5 +9,5 @@
     </item>
     <item
             android:drawable="@drawable/add"
-            android:gravity="center"/>
+            android:gravity="center" android:height="20dp" android:width="20dp"/>
 </layer-list>

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             boolean logged = Boolean.getBoolean(Objects.requireNonNull(user.get("isLoggedIn")));
             if (logged){
                 intent = new Intent(this, DashboardActivity.class);
-                intent.putExtra("userId", userStr);
+                intent.putExtra("user", userStr);
             }else {
                 intent = new Intent(this, LoginActivity.class);
             }

@@ -1,10 +1,15 @@
 package com.mobile.mobilewallet;
 
+import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.mobile.mobilewallet.Objects.TransactionHistory;
 import com.mobile.mobilewallet.adapter.MyAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -12,14 +17,17 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        int id = getIntent().getIntExtra("userId", -1);
-        assert id != -1;
+        SharedPreferences sharedPreferences = getSharedPreferences("userLoginStatus", MODE_PRIVATE);
+
+        String id = sharedPreferences.getString("user",null);
+        assert id != null;
 
         RecyclerView recyclerView = findViewById(R.id.recentTransfer);
-        MyAdapter myAdapter = new MyAdapter(null,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(myAdapter);
 
+        List<TransactionHistory> histories = new ArrayList<>();
+        MyAdapter myAdapter = new MyAdapter(histories,this);
+        recyclerView.setAdapter(myAdapter);
     }
 }

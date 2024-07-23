@@ -34,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
             etPassword.setError(errorMessage);
             if (isValid && errorMessage == null){
                 Intent intent = new Intent(this, DashboardActivity.class);
-                SharedPreferences sharedPreferences = getSharedPreferences("", MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getSharedPreferences("userLoginStatus", MODE_PRIVATE);
                 int startFrom = sharedPreferences.getInt("userId", 0);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 LinkedHashMap<String, String> user = new LinkedHashMap<>();
@@ -45,6 +45,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Gson gson = new Gson();
                 editor.putString("user", gson.toJson(user));
                 editor.apply();
+                startActivity(intent);
             }
         });
 

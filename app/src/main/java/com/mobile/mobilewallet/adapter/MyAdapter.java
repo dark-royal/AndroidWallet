@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -30,6 +31,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyAdapter(List<TransactionHistory> itemList, Context context) {
         MyAdapter.itemList = itemList;
         MyAdapter.context = context;
+        TransactionHistory history = new TransactionHistory();
+        history.setName("Add");
+        Bitmap bit = drawableToBitmap(ContextCompat.getDrawable(context, R.drawable.combined_shape));
+        history.setAvatarByte(bitmapToByteArray(bit));
+        itemList.add(history);
     }
 
     @NonNull
@@ -52,35 +58,37 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public Button avatar;
+        public TextView avatarName;
+        private ImageView avatar;
         public MyViewHolder(View view) {
             super(view);
             avatar = view.findViewById(R.id.avatar);
+            avatarName = view.findViewById(R.id.avatarName);
+
         }
 
         public void bind(TransactionHistory transactionHistory) {
             if (transactionHistory.getAvatarByte()!=null && transactionHistory.getAvatarByte().length !=0) {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(transactionHistory.getAvatarByte(), 0, transactionHistory.getAvatarByte().length);
-                BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
-                avatar.setCompoundDrawablesWithIntrinsicBounds(bitmapDrawable, null, null, null);
+//                BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
+                avatar.setImageBitmap(bitmap);
             }else {
-                avatar.setCompoundDrawablesWithIntrinsicBounds(
-                        ContextCompat.getDrawable(context, R.drawable.default_avatar),
-                        null,null, null);
+                avatar.setImageDrawable(
+                        ContextCompat.getDrawable(context, R.drawable.default_avatar));
             }
-            if (itemList.isEmpty()){
-                avatar.setCompoundDrawablesWithIntrinsicBounds(
-                        ContextCompat.getDrawable(context, R.drawable.combined_shape),
-                        null,null, null);
-                avatar.setText("Add");
-            }
+//            if (itemList.isEmpty()){
+//                avatar.setCompoundDrawablesWithIntrinsicBounds(
+//                        ContextCompat.getDrawable(context, R.drawable.combined_shape),
+//                        null,null, null);
+//                avatar.setText("Add");
+//            }
 
-            avatar.setText(transactionHistory.getName());
+            avatarName.setText(transactionHistory.getName());
             avatar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent;
-                    if (avatar.getText().toString().equalsIgnoreCase("add")){
+                    if (avatarName.getText().toString().equalsIgnoreCase("add")){
                         intent  = new Intent(context, Transfer.class);
                     }else {
                         intent  = new Intent(context, Reciept.class);
@@ -92,26 +100,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             });
         }
 
-//        public byte[] bitmapToByteArray(Bitmap bitmap) {
-//            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-//            return stream.toByteArray();
-//        }
-//        public Bitmap drawableToBitmap(Drawable drawable) {
-//
-//            if (drawable instanceof BitmapDrawable) {
-//                return ((BitmapDrawable) drawable).getBitmap();
-//            }
-//
-//            Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-//            Canvas canvas = new Canvas(bitmap);
-//            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-//            drawable.draw(canvas);
-//
-//            return bitmap;
-//        }
+
 
 
     }
+    public byte[] bitmapToByteArray(Bitmap bitmap) {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        return stream.toByteArray();
+    }
+    public Bitmap drawableToBitmap(Drawable drawable) {
 
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        }
+
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+
+        return bitmap;
+    }
 }
