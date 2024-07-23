@@ -13,7 +13,7 @@
             android:layout_height="314dp"
             android:background="#270684" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/linearLayout4">
+            android:id="@+id/linearLayout4" android:gravity="center_horizontal">
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -21,21 +21,26 @@
             <ImageView
                     android:layout_width="112dp"
                     android:layout_height="match_parent" app:srcCompat="@android:drawable/alert_dark_frame"
-                    android:id="@+id/imageView3" android:layout_weight="1"/>
+                    android:id="@+id/imageView3"/>
             <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:layout_weight="1">
                 <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content" android:layout_marginTop="10dp">
                     <TextView
                             android:text="Hello,"
                             android:layout_width="wrap_content"
                             android:textSize="24sp"
-                            android:layout_height="wrap_content" android:id="@+id/greet" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:id="@+id/greet"
                             android:textColor="#FDFCFC"/>
+                    <Space
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent" android:id="@+id/button4" android:layout_weight="1"
@@ -44,7 +49,7 @@
                 <TextView
                         android:text="Name"
                         android:textSize="24sp"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:layout_height="wrap_content" android:id="@+id/textView10" android:textColor="#FFFFFF"/>
             </LinearLayout>
@@ -57,43 +62,51 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="370dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="215dp" android:background="@drawable/border_radius"
                     android:backgroundTint="#45279D">
                 <TextView
                         android:text="Main balance"
                         android:gravity="center_vertical"
                         android:textAlignment="center"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/textView11" android:textColor="#A29B9B"
                         android:textSize="16sp"/>
                 <TextView
                         android:text="$14,233.00"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:textAlignment="center"
                         android:layout_height="wrap_content" android:id="@+id/textView12" android:textColor="#FFFFFF"
                         android:textStyle="bold" android:textSize="35sp"/>
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="393dp"
-                        android:layout_height="71dp" android:background="#45279E">
+                        android:layout_width="wrap_content"
+                        android:layout_height="71dp" android:background="#45279E" android:gravity="center">
                     <Button
                             android:text="Top Up"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/button5" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:id="@+id/button5"
                             android:background="@android:color/transparent" app:icon="@drawable/download_up"
                             android:drawableTop="@drawable/download_up" app:iconGravity="top" app:iconSize="16dp"
                             android:textSize="16sp"/>
+
+                   <View android:layout_width="1dp"
+                         android:layout_height="30dp"
+                         android:background="#270683"/>
+
                     <Button
                             android:text="Withdraw"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/button6" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:id="@+id/button6"
                             app:iconGravity="top" app:icon="@drawable/withdraw_icon" app:iconSize="16dp"
                             android:background="@android:color/transparent" android:textSize="16sp"/>
+                    <View android:layout_width="1dp"
+                          android:layout_height="30dp"
+                          android:background="#270683"/>
                     <Button
                             android:text="Transfer"
-                            android:layout_width="89dp"
-                            android:layout_height="wrap_content" android:id="@+id/button7" android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/button7"
                             app:icon="@drawable/transfer" app:iconGravity="top"
                             android:background="@android:color/transparent" android:textSize="16sp"/>
                 </LinearLayout>
@@ -108,15 +121,15 @@
             android:layout_height="wrap_content" android:id="@+id/textView13"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="20dp"
-            app:layout_constraintHorizontal_bias="0.052" app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-            app:layout_constraintVertical_bias="0.0" android:textSize="25sp"/>
+            app:layout_constraintHorizontal_bias="0.052"
+            android:textSize="25sp"/>
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="413dp"
-            android:layout_height="114dp"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/recyclerView" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="251dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" app:layout_constraintVertical_bias="0.0"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -124,7 +137,7 @@
             android:id="@+id/linearLayout5" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="192dp"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" app:layout_constraintVertical_bias="0.114">
         <TextView
                 android:text="Latest Transactions"
                 android:textColor="@color/black"
@@ -142,60 +155,65 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="409dp"
-            android:layout_height="78dp" tools:layout_editor_absoluteY="812dp" tools:layout_editor_absoluteX="1dp">
+            android:layout_height="78dp" tools:layout_editor_absoluteY="812dp" tools:layout_editor_absoluteX="1dp"
+            android:id="@+id/linearLayout6">
     </LinearLayout>
     <ListView
             android:layout_width="match_parent"
-            android:layout_height="94dp"
+            android:layout_height="179dp"
             android:id="@+id/listView" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout5" app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.0"/>
+            android:layout_marginBottom="3dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout6"/>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="79dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="3dp"
-            app:layout_constraintTop_toBottomOf="@+id/listView" app:layout_constraintVertical_bias="0.952"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0">
 
         <Button
-                android:text="Button"
+                android:text="Home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button9"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:icon="@drawable/home" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textSize="16sp"
                 android:textColor="#424141"/>
         <Button
-                android:text="Button"
+                android:text="History"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button10"
                 app:layout_constraintStart_toEndOf="@+id/button9" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintVertical_bias="0.483"  app:icon="@drawable/home" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                app:layout_constraintVertical_bias="0.483" app:icon="@drawable/transaction_history"
+                app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textSize="16sp"
                 android:textColor="#424141"/>
         <Button
-                android:text="Button"
+                android:text="More"
                 android:layout_width="wrap_content"
+                android:textSize="16sp"
                 android:layout_height="wrap_content" android:id="@+id/button11"
                 app:layout_constraintStart_toEndOf="@+id/button10" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.516"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.095" app:icon="@drawable/home" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                app:layout_constraintHorizontal_bias="0.095" app:icon="@drawable/more_pay" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
                 android:textColor="#424141"/>
         <Button
-                android:text="Button"
+                android:text="Account"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button12"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" android:id="@+id/avatar"
                 app:layout_constraintStart_toEndOf="@+id/button11" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"  app:icon="@drawable/home" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="33dp" android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent" app:icon="@drawable/my_account" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
                 android:textColor="#424141"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
