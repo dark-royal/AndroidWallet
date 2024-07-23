@@ -2,6 +2,11 @@ package com.mobile.mobilewallet.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +21,7 @@ import com.mobile.mobilewallet.R;
 import com.mobile.mobilewallet.Reciept;
 import com.mobile.mobilewallet.Transfer;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -52,7 +58,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
 
         public void bind(TransactionHistory transactionHistory) {
-            avatar.setCompoundDrawablesWithIntrinsicBounds(transactionHistory.getAvatar(), null, null, null);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(transactionHistory.getAvatarByte(), 0, transactionHistory.getAvatarByte().length);
+            BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
+            avatar.setCompoundDrawablesWithIntrinsicBounds(bitmapDrawable, null, null, null);
             avatar.setText(transactionHistory.getName());
             avatar.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,14 +70,32 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                         intent  = new Intent(context, Transfer.class);
                     }else {
                         intent  = new Intent(context, Reciept.class);
+                        Gson gson = new Gson();
+                        intent.putExtra("jsonHistory", gson.toJson(transactionHistory));
                     }
-                    Gson gson = new Gson();
-
-                    intent.putExtra("jsonHistory", gson.toJson(transactionHistory));
                     context.startActivity(intent);
                 }
             });
         }
+
+//        public byte[] bitmapToByteArray(Bitmap bitmap) {
+//            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//            return stream.toByteArray();
+//        }
+//        public Bitmap drawableToBitmap(Drawable drawable) {
+//
+//            if (drawable instanceof BitmapDrawable) {
+//                return ((BitmapDrawable) drawable).getBitmap();
+//            }
+//
+//            Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+//            Canvas canvas = new Canvas(bitmap);
+//            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+//            drawable.draw(canvas);
+//
+//            return bitmap;
+//        }
 
 
     }

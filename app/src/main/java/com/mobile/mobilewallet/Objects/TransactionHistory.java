@@ -7,11 +7,20 @@ import java.time.LocalDateTime;
 public class TransactionHistory {
     private String name;
     private String description;
-    private Drawable avatar;
+//    private Drawable avatar;
+    private byte[] avatarByte;
     private LocalDateTime dateTime;
     private String benAccountNumber;
     private String recAccountNumber;
     private String walletId;
+
+    public byte[] getAvatarByte() {
+        return avatarByte;
+    }
+
+    public void setAvatarByte(byte[] avatarByte) {
+        this.avatarByte = avatarByte;
+    }
 
     public String getName() {
         return name;
@@ -21,13 +30,13 @@ public class TransactionHistory {
         this.name = name;
     }
 
-    public Drawable getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(Drawable avatar) {
-        this.avatar = avatar;
-    }
+//    public Drawable getAvatar() {
+//        return avatar;
+//    }
+//
+//    public void setAvatar(Drawable avatar) {
+//        this.avatar = avatar;
+//    }
 
     public LocalDateTime getDateTime() {
         return dateTime;
