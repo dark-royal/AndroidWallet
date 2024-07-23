@@ -25,14 +25,14 @@ public class LoginActivity extends AppCompatActivity {
 
         Button signup = findViewById(R.id.button);
         signup.setOnClickListener(x->{
-            boolean isValid = throwEmptyNessError(new int[]{R.id.et_password, R.id.et_EmailAddress});
+            boolean isValid = throwEmptyNessError(new int[]{R.id.editTextPassword, R.id.et_EmailAddress});
             if (isValid){
                 Intent intent = new Intent(this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
 
-        etPassword = findViewById(R.id.et_password);
+        etPassword = findViewById(R.id.editTextPassword);
         etPassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

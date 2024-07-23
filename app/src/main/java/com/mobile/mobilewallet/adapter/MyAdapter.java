@@ -25,10 +25,11 @@ import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private final List<TransactionHistory> itemList;
+    private static List<TransactionHistory> itemList;
     private static Context context;
     public MyAdapter(List<TransactionHistory> itemList, Context context) {
-        this.itemList = itemList;
+        MyAdapter.itemList = itemList;
+        MyAdapter.context = context;
     }
 
     @NonNull
@@ -58,9 +59,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
 
         public void bind(TransactionHistory transactionHistory) {
-            Bitmap bitmap = BitmapFactory.decodeByteArray(transactionHistory.getAvatarByte(), 0, transactionHistory.getAvatarByte().length);
-            BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
-            avatar.setCompoundDrawablesWithIntrinsicBounds(bitmapDrawable, null, null, null);
+            if (transactionHistory.getAvatarByte()!=null && transactionHistory.getAvatarByte().length !=0) {
+                Bitmap bitmap = BitmapFactory.decodeByteArray(transactionHistory.getAvatarByte(), 0, transactionHistory.getAvatarByte().length);
+                BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), bitmap);
+                avatar.setCompoundDrawablesWithIntrinsicBounds(bitmapDrawable, null, null, null);
+            }else {
+                avatar.setCompoundDrawablesWithIntrinsicBounds(
+                        ContextCompat.getDrawable(context, R.drawable.default_avatar),
+                        null,null, null);
+            }
+            if (itemList.isEmpty()){
+                avatar.setCompoundDrawablesWithIntrinsicBounds(
+                        ContextCompat.getDrawable(context, R.drawable.combined_shape),
+                        null,null, null);
+                avatar.setText("Add");
+            }
+
             avatar.setText(transactionHistory.getName());
             avatar.setOnClickListener(new View.OnClickListener() {
                 @Override

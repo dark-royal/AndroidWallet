@@ -2,6 +2,7 @@ package com.mobile.mobilewallet;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
@@ -9,29 +10,43 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.google.gson.Gson;
+
+import java.util.LinkedHashMap;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText etPassword;
+    private EditText etEmail;
     private boolean isPasswordVisible = false;
     HelperClass helperClass = new HelperClass();
-    EditText password ;
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        password = findViewById(R.id.et_confirmpassword);
+        etPassword = findViewById(R.id.et_confirmpassword);
+        etEmail = findViewById(R.id.et_email);
+
         Button signup = findViewById(R.id.button);
         signup.setOnClickListener(x->{
             boolean isValid = throwEmptyNessError(new int[]{R.id.et_confirmpassword, R.id.et_email, R.id.et_name});
-            String errorMessage = helperClass.validatePassword(password.getText().toString());
-            password.setError(errorMessage);
+            String errorMessage = helperClass.validatePassword(etPassword.getText().toString());
+            etPassword.setError(errorMessage);
             if (isValid && errorMessage == null){
                 Intent intent = new Intent(this, DashboardActivity.class);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("", MODE_PRIVATE);
+                int startFrom = sharedPreferences.getInt("userId", 0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                LinkedHashMap<String, String> user = new LinkedHashMap<>();
+                user.put("userId", String.valueOf(startFrom+1));
+                user.put("userLoginStatus", String.valueOf(true));
+                user.put("userEmail", etEmail.getText().toString());
+                user.put("userPassword", etEmail.getText().toString());
+                Gson gson = new Gson();
+                editor.putString("user", gson.toJson(user));
+                editor.apply();
             }
         });
-        etPassword = findViewById(R.id.et_confirmpassword);
 
         etPassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
