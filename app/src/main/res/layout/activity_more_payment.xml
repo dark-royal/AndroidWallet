@@ -7,4 +7,549 @@
         android:layout_height="match_parent"
         tools:context=".MorePayment">
 
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+    >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2" app:icon="@drawable/back_icon"
+                app:iconTint="#050505" android:backgroundTint="@android:color/transparent" android:onClick="back"
+                android:text="More" android:textColor="#1B1B1B"/>
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
+                android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
+                app:iconGravity="end" android:foreground="@drawable/border_radius_colour"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="714dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/linearLayout7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.258">
+
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginLeft="10dp"
+                      android:textStyle="bold"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginBottom="10dp"
+                      android:text="All Bill" android:textSize="20sp"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO" app:srcCompat="@drawable/eletric"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="16sp"
+                              android:layout_height="wrap_content"
+                              android:text="Electricity"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/card_pay"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="16sp"
+                              android:layout_height="wrap_content"
+                              android:text="Card Pay"
+                              android:textAlignment="center"
+                              android:lineHeight="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/internet"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="16sp"
+                              android:layout_height="wrap_content"
+                              android:text="Internet"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO" app:srcCompat="@drawable/antitheft_bill"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="16sp"
+                              android:layout_height="wrap_content"
+                              android:text="Electricity"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" android:gravity="center">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/water"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Water"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/qr_pay"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Qr Pay"
+                              android:textAlignment="center"
+                              android:lineHeight="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/online_pay"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Online Pay"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="7dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/merchant"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Get Pos"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="5dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/become_merchant"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Agent"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="8dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/loan"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Loan"
+                              android:textAlignment="center"
+                              android:lineHeight="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="8dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/payback"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Payback"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="9dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/hospital"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Hospital"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="10dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/invoice"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Invoice"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="2dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/tax_icon"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Qr Pay"
+                              android:textAlignment="center"
+                              android:lineHeight="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="7dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/bet_icon"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Betting"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="13dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/lock_fund"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Lock Fund"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginBottom="10dp"
+                      android:layout_marginLeft="10dp"
+                      android:textStyle="bold"
+                      android:text="Entertainment" android:layout_marginTop="15dp" android:textSize="20sp"/>
+            <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="left"
+
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="7dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/game_icon"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Game"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                    <ImageView android:layout_width="50dp"
+                               android:padding="7dp"
+                               android:background="@drawable/bill_icon"
+                               android:backgroundTint="#E2D2ED"
+                               android:layout_height="50dp"
+                               android:contentDescription="TODO"
+                               app:srcCompat="@drawable/bet_icon"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:layout_height="wrap_content"
+                              android:text="Betting"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/bottomNavigationView2">
+        <include layout="@layout/bottom_nav"/>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

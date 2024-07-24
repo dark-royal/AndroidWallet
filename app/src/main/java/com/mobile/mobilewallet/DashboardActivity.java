@@ -37,8 +37,8 @@ public class DashboardActivity extends AppCompatActivity {
         transactionMade.setLayoutManager(transLayoutManager);
         TransactionAdapter transactionAdapter = new TransactionAdapter(new ArrayList<>(), this);
         transactionMade.setAdapter(transactionAdapter);
-
     }
+
     public void viewAllTrans(View view){
         Intent intent = new Intent(this, TransactionHistory.class);
         startActivity(intent);

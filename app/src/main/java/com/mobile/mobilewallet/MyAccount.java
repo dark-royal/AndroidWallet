@@ -3,11 +3,11 @@ package com.mobile.mobilewallet;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TransactionHistory extends AppCompatActivity {
+public class MyAccount extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transactions_history);
+        setContentView(R.layout.activity_my_account);
     }
 }

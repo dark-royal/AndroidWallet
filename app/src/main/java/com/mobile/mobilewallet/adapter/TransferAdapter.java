@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import com.mobile.mobilewallet.Objects.TransactionHistory;
 import com.mobile.mobilewallet.R;
+import com.mobile.mobilewallet.Reciept;
 import com.mobile.mobilewallet.Transfer;
 
 import java.io.ByteArrayOutputStream;

@@ -16,6 +16,15 @@ public class TransactionHistory {
     private String senderName;
     private String tranType;
     private String amount;
+    private String transactionStatus;
+
+    public String getTransactionStatus() {
+        return transactionStatus;
+    }
+
+    public void setTransactionStatus(String transactionStatus) {
+        this.transactionStatus = transactionStatus;
+    }
 
     public String getAmount() {
         return amount;

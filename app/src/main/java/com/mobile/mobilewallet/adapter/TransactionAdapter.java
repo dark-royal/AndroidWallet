@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 import com.mobile.mobilewallet.MorePayment;
 import com.mobile.mobilewallet.Objects.TransactionHistory;
 import com.mobile.mobilewallet.R;
+import com.mobile.mobilewallet.Reciept;
 
 
 import java.io.ByteArrayOutputStream;

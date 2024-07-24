@@ -86,7 +86,7 @@
                         android:gravity="center_vertical"
                         android:id="@+id/transAmount"
                         android:background="@android:color/transparent" android:textColor="#EF1A1A"
-                />
+                        tools:ignore="RtlCompat"/>
                 <ImageView
                         android:layout_width="39dp"
                         android:layout_height="match_parent" app:srcCompat="@drawable/arrow"
@@ -99,17 +99,18 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:gravity="clip_vertical"
+            android:layout_marginStart="10dp"
             android:layout_gravity="bottom"
-            android:layout_height="wrap_content" android:id="@+id/transCont"
+            android:layout_height="wrap_content" android:id="@+id/eachTransCont"
             android:background="@drawable/demacator" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/avatarCont">
         <ImageView
                 android:layout_width="51dp"
                 android:layout_height="59dp" app:srcCompat="@drawable/default_avatar"
-                android:id="@+id/transAvatar" android:contentDescription="TODO"/>
+                android:id="@+id/eachTransAvatar" android:contentDescription="TODO"/>
         <LinearLayout
                 android:orientation="vertical"
-                android:id="@+id/transactionCont"
+                android:id="@+id/eachTransactionCont"
                 android:layout_width="194dp"
                 android:layout_marginLeft="5dp"
                 android:gravity="center_vertical"
@@ -119,14 +120,14 @@
                     android:textStyle="bold"
                     android:textSize="25sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/tranName"/>
+                    android:layout_height="wrap_content" android:id="@+id/eachTranName"/>
             <TextView
                     android:text="Today 12:32"
                     android:textSize="15sp"
                     android:layout_gravity="bottom"
                     android:gravity="bottom"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/tranDate"/>
+                    android:layout_height="wrap_content" android:id="@+id/eachTranDate"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="vertical"
@@ -141,15 +142,17 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:gravity="center_vertical"
-                    android:id="@+id/transAmount"
+                    android:id="@+id/eachTransAmount"
                     android:background="@android:color/transparent" android:textColor="#EF1A1A"
-            />
+                    tools:ignore="RtlCompat"/>
             <TextView
                     android:text="Successful"
                     android:background="@drawable/edit_text_radius"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView15" android:backgroundTint="#B4F18A"
-                    android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_marginTop="5dp"/>
+                    android:layout_height="wrap_content" android:id="@+id/textView15" android:backgroundTint="#C997F4"
+                    android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_marginTop="5dp"
+                    android:focusableInTouchMode="true"/>
+        </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
