@@ -3,7 +3,6 @@ package com.mobile.mobilewallet.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -20,7 +19,6 @@ import com.google.gson.Gson;
 import com.mobile.mobilewallet.MorePayment;
 import com.mobile.mobilewallet.Objects.TransactionHistory;
 import com.mobile.mobilewallet.R;
-import com.mobile.mobilewallet.Reciept;
 
 
 import java.io.ByteArrayOutputStream;

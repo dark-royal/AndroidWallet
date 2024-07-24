@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0">
+
+        <Button
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button9"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:icon="@drawable/home" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:textColor="#424141"/>
+        <Button
+                android:text="History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button10"
+                app:layout_constraintStart_toEndOf="@+id/button9" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.044"
+                app:layout_constraintVertical_bias="0.483" app:icon="@drawable/transaction_history"
+                app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:textColor="#424141"/>
+        <Button
+                android:text="More"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" android:id="@+id/button11"
+                app:layout_constraintStart_toEndOf="@+id/button10" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.516"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.095" app:icon="@drawable/more_pay" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
+        <Button
+                android:text="Account"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" android:id="@+id/avatar"
+                app:layout_constraintStart_toEndOf="@+id/button11" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:icon="@drawable/my_account" app:iconGravity="top"
+                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textColor="#424141"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
