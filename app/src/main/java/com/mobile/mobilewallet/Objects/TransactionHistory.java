@@ -9,10 +9,37 @@ public class TransactionHistory {
     private String description;
 //    private Drawable avatar;
     private byte[] avatarByte;
-    private LocalDateTime dateTime;
+    private String dateTime;
     private String benAccountNumber;
     private String recAccountNumber;
     private String walletId;
+    private String senderName;
+    private String tranType;
+    private String amount;
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public String getSenderName() {
+        return senderName;
+    }
+
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+
+    public String getTranType() {
+        return tranType;
+    }
+
+    public void setTranType(String tranType) {
+        this.tranType = tranType;
+    }
 
     public byte[] getAvatarByte() {
         return avatarByte;
@@ -38,11 +65,11 @@ public class TransactionHistory {
 //        this.avatar = avatar;
 //    }
 
-    public LocalDateTime getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 

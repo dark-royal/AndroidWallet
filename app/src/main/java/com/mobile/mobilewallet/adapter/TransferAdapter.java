@@ -10,8 +10,9 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.view.ViewParent;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -25,17 +26,19 @@ import com.mobile.mobilewallet.Transfer;
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class TransferAdapter extends RecyclerView.Adapter<TransferAdapter.MyViewHolder> {
     private static List<TransactionHistory> itemList;
     private static Context context;
-    public MyAdapter(List<TransactionHistory> itemList, Context context) {
-        MyAdapter.itemList = itemList;
-        MyAdapter.context = context;
-        TransactionHistory history = new TransactionHistory();
-        history.setName("Add");
-        Bitmap bit = drawableToBitmap(ContextCompat.getDrawable(context, R.drawable.combined_shape));
-        history.setAvatarByte(bitmapToByteArray(bit));
-        itemList.add(history);
+    public TransferAdapter(List<TransactionHistory> itemList, Context context) {
+        TransferAdapter.itemList = itemList;
+        TransferAdapter.context = context;
+        if (itemList.isEmpty()) {
+            TransactionHistory history = new TransactionHistory();
+            history.setName("Add");
+            Bitmap bit = drawableToBitmap(ContextCompat.getDrawable(context, R.drawable.combined_shape));
+            history.setAvatarByte(bitmapToByteArray(bit));
+            itemList.add(history);
+        }
     }
 
     @NonNull
@@ -43,7 +46,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.custom_adapter_layout, parent, false);
-        return new MyViewHolder(itemView);
+        LinearLayout layout = itemView.findViewById(R.id.avatarCont);
+        ((ViewGroup)layout.getParent()).removeView(layout);
+        return new MyViewHolder(layout);
     }
 
     @Override

@@ -1,12 +1,15 @@
 package com.mobile.mobilewallet;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.mobilewallet.Objects.TransactionHistory;
-import com.mobile.mobilewallet.adapter.MyAdapter;
+import com.mobile.mobilewallet.adapter.TransactionAdapter;
+import com.mobile.mobilewallet.adapter.TransferAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +25,22 @@ public class DashboardActivity extends AppCompatActivity {
         String id = sharedPreferences.getString("user",null);
         assert id != null;
 
-        RecyclerView recyclerView = findViewById(R.id.recentTransfer);
+        RecyclerView recentTransfer = findViewById(R.id.recentTransfer);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
+        recentTransfer.setLayoutManager(layoutManager);
         List<TransactionHistory> histories = new ArrayList<>();
-        MyAdapter myAdapter = new MyAdapter(histories,this);
-        recyclerView.setAdapter(myAdapter);
+        TransferAdapter transferAdapter = new TransferAdapter(histories,this);
+        recentTransfer.setAdapter(transferAdapter);
+
+        RecyclerView transactionMade = findViewById(R.id.latestTran);
+        RecyclerView.LayoutManager transLayoutManager = new LinearLayoutManager(this);
+        transactionMade.setLayoutManager(transLayoutManager);
+        TransactionAdapter transactionAdapter = new TransactionAdapter(new ArrayList<>(), this);
+        transactionMade.setAdapter(transactionAdapter);
+
+    }
+    public void viewAllTrans(View view){
+        Intent intent = new Intent(this, TransactionHistory.class);
+        startActivity(intent);
     }
 }
