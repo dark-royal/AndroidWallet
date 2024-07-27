@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                     Gson gson = new Gson();
                     Type type = new TypeToken<HashMap<String, String>>() {}.getType();
                     HashMap<String, String> user = gson.fromJson(userStr, type);
-                    user.replace("userLoginStatus", String.valueOf(true));
+                    user.replace("isLoggedIn", String.valueOf(true));
                     editor.putString("user", gson.toJson(user));
                     editor.apply();
                     Intent intent = new Intent(this, DashboardActivity.class);

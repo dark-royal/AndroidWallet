@@ -20,19 +20,20 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("userLoginStatus", MODE_PRIVATE);
         String userStr = sp.getString("user", null);
         Gson gson = new Gson();
-        Type type =  new TypeToken<HashMap<String, String>>() {}.getType();
-        HashMap<String, String> user = gson.fromJson(userStr, type);
-        String user_id = user.get("userId");
         Intent intent;
-        if (user_id != null){
-            boolean logged = Boolean.getBoolean(Objects.requireNonNull(user.get("isLoggedIn")));
-            if (logged){
-                intent = new Intent(this, DashboardActivity.class);
-                intent.putExtra("user", userStr);
-            }else {
-                intent = new Intent(this, LoginActivity.class);
-            }
+        if (userStr != null) {
+            Type type = new TypeToken<HashMap<String, String>>() {
+            }.getType();
+            HashMap<String, String> user = gson.fromJson(userStr, type);
+                boolean logged = Boolean.getBoolean(Objects.requireNonNull(user.get("isLoggedIn")));
+                if (logged) {
+                    intent = new Intent(this, DashboardActivity.class);
+                    intent.putExtra("user", userStr);
+                } else {
+                    intent = new Intent(this, LoginActivity.class);
+                }
         }else {
+            System.out.println("______________________\nthere a problem with user str");
             intent = new Intent(this, SignUpActivity.class);
         }
         startActivity(intent);

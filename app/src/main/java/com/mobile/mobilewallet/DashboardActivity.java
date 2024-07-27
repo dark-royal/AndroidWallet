@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.mobilewallet.Objects.TransactionHistory;
 import com.mobile.mobilewallet.adapter.TransactionAdapter;
 import com.mobile.mobilewallet.adapter.TransferAdapter;
+import com.mobile.mobilewallet.helperclass.ContextDeterminer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,4 +44,12 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TransactionHistory.class);
         startActivity(intent);
     }
+
+    public void nextScreen(View view){
+        ContextDeterminer contextDetermine = new ContextDeterminer();
+        Class<?> context = contextDetermine.nextScreenDeterminator(view);
+        Intent intent = new Intent(this, context);
+        this.startActivity(intent);
+        finish();
+}
 }

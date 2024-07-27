@@ -66,7 +66,7 @@ public class TransferAdapter extends RecyclerView.Adapter<TransferAdapter.MyView
         private ImageView avatar;
         public MyViewHolder(View view) {
             super(view);
-            avatar = view.findViewById(R.id.avatar);
+            avatar = view.findViewById(R.id.myAccount);
             avatarName = view.findViewById(R.id.avatarName);
 
         }

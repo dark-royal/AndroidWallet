@@ -22,10 +22,7 @@ public class HelperClass {
                 return "password is too common";
             }
         }
-        return null;
-    }
-
-    }
+        return null;}};
 
 
 
