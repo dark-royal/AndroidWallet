@@ -6,28 +6,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MyAccount">
-<!--    <LinearLayout-->
-<!--            android:orientation="vertical"-->
-<!--            android:gravity="center"-->
-<!--            android:background="#270684"-->
-<!--            android:layout_width="416dp"-->
-<!--            android:layout_height="153dp" tools:layout_editor_absoluteY="1dp" tools:layout_editor_absoluteX="-6dp">-->
-<!--        <ImageView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content" app:srcCompat="@drawable/default_avatar"-->
-<!--                android:id="@+id/imageView3"-->
-
-<!--                android:layout_gravity="left|center_vertical"/>-->
-<!--        <TextView-->
-<!--                android:text="Name"-->
-<!--                android:gravity="center"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="24sp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content" android:id="@+id/textView16"/>-->
-<!--    </LinearLayout>-->
-
     <LinearLayout
             android:orientation="vertical"
             android:gravity="center_horizontal"

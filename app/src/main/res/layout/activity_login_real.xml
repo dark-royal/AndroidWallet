@@ -9,16 +9,19 @@
 
     <LinearLayout
             android:orientation="horizontal"
+            android:gravity="center"
             android:layout_width="135dp"
             android:layout_height="86dp"
             android:id="@+id/linearLayout" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.106" android:foreground="@drawable/border_radius_colour">
+            app:layout_constraintVertical_bias="0.106">
         <ImageView
-                android:layout_width="72dp"
-                android:layout_height="64dp" app:srcCompat="@drawable/wallet_logo_edited"
-                android:id="@+id/imageView" android:layout_weight="1" android:layout_margin="10dp"
+                android:layout_width="74dp"
+                android:layout_height="76dp" app:srcCompat="@drawable/wallet_logo_edited"
+                android:background="@drawable/border_radius_colour"
+                android:padding="10dp"
+                android:id="@+id/imageView" android:layout_margin="10dp"
                 android:layout_gravity="center"/>
     </LinearLayout>
     <TextView

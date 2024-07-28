@@ -31,12 +31,13 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button3" app:icon="@drawable/wallet_logo_edited"
-                android:background="@android:color/transparent" app:iconTint="#000000" app:iconSize="35dp"
-                app:iconGravity="end" android:foreground="@drawable/border_radius_colour"/>
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp" app:srcCompat="@drawable/wallet_logo_edited"
+                android:background="@drawable/border_radius_colour"
+                android:padding="8dp"
+                android:id="@+id/imageView" android:layout_margin="10dp"
+                android:layout_gravity="center"/>
     </LinearLayout>
     <TextView
             android:text="Create Your Account"
@@ -68,7 +69,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.563">
         <TextView
-                android:text="Confirm Password"
+                android:text="Password"
                 android:layout_marginLeft="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +85,7 @@
                 android:id="@+id/editT_confirmpassword"
                 android:autofillHints=""
                 android:hint="    ***************"
-                android:drawableRight="@drawable/visible"
+                android:drawableRight="@drawable/not_visible"
                 android:background="@drawable/edit_text_radius"/>
     </LinearLayout>
     <LinearLayout
