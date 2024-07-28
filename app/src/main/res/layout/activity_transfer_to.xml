@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TopUp">
+        tools:context=".TransferTo">
 
     <LinearLayout
             android:orientation="horizontal"
@@ -16,10 +16,11 @@
             android:background="@drawable/border_radius"
             android:backgroundTint="@color/white"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.64" app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-            android:layout_marginTop="20dp">
+            app:layout_constraintHorizontal_bias="0.52" app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+            android:layout_marginTop="12dp" android:id="@+id/linearLayout10">
         <ImageView
                 android:layout_width="wrap_content"
+                android:layout_weight=""
                 android:layout_height="wrap_content" app:srcCompat="@drawable/antitheft_bill"
         />
         <LinearLayout
@@ -29,51 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" android:layout_weight="1">
             <TextView
-                    android:text="Cash Deposit"
+                    android:text="Transfer to Bank "
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             <TextView
-                    android:text="Fund your account with nearby Agent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <ImageView
-                android:padding="1dp"
-                android:layout_width="60dp"
-                android:layout_height="50dp" app:srcCompat="@drawable/arrow"
-        />
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="386dp"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@drawable/border_radius"
-            android:backgroundTint="@color/white"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.64" app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
-            android:layout_marginTop="16dp" android:id="@+id/linearLayout10">
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/antitheft_bill"
-                />
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" android:layout_weight="1">
-            <TextView
-                    android:text="Bank Transfer"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            <TextView
-                    android:text="Add money with internet or Mobile Banking"
+                    android:text="Transfer to any Account"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -135,13 +98,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_weight="1">
             <TextView
-                    android:text="Top-Up with Card"
+                    android:text="Transfer to E-wallet User"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/textView16"/>
             <TextView
-                    android:text="@string/add_money_directly_from_your_bank_card"
+                    android:text="Easily transfer to another beneficiary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/textView17"/>
         </LinearLayout>
@@ -151,7 +114,4 @@
                 android:layout_height="50dp" app:srcCompat="@drawable/arrow"
         />
     </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

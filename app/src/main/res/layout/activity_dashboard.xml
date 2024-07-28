@@ -156,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button8"
                 android:background="@android:color/transparent" android:hapticFeedbackEnabled="true"
-                android:textColor="#403F3F" android:textSize="16sp" android:onClick="viewAllTrans"/>
+                android:textColor="#FF673AB7" android:textSize="16sp" android:onClick="viewAllTrans"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
