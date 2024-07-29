@@ -22,7 +22,7 @@
                 android:background="@drawable/border_radius_colour"
                 android:padding="10dp"
                 android:id="@+id/imageView" android:layout_margin="10dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" android:tint="#8413AE"/>
     </LinearLayout>
     <TextView
             android:text="Sign in Your Account"

@@ -10,17 +10,24 @@
             android:layout_width="409dp"
             android:layout_height="73dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView2" app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/bottomNavigationView">
         <include layout="@layout/bottom_nav"/>
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
     <RelativeLayout android:layout_width="410dp" android:layout_height="104dp"
-                    android:background="@color/white" android:id="@+id/relativeLayout">
+                    android:background="@color/white" android:id="@+id/relativeLayout"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="1dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="20dp" app:layout_constraintBottom_toTopOf="@+id/relativeLayout2">
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="68dp" tools:layout_editor_absoluteY="1dp" tools:layout_editor_absoluteX="1dp">
+                android:layout_height="68dp" tools:layout_editor_absoluteY="1dp" tools:layout_editor_absoluteX="1dp"
+                android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+                android:layout_alignParentBottom="true" android:layout_marginBottom="36dp"
+                android:layout_marginTop="0dp" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp">
             <Button
                     android:text="Button"
                     android:textColor="#838282"
@@ -50,8 +57,12 @@
                       android:orientation="horizontal" android:layout_alignParentBottom="true"
                       android:layout_marginBottom="6dp" android:layout_marginTop="74dp"
                       android:layout_alignParentTop="true">
-            <Spinner android:layout_width="wrap_content" android:layout_height="wrap_content"
-                     android:dropDownWidth="match_parent"/>
+            <Spinner android:layout_width="wrap_content"
+                     android:id="@+id/categoryDrop"
+                     android:layout_height="wrap_content"
+                     android:dropDownWidth="match_parent"
+                     android:spinnerMode="dropdown"/>
+
             <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
             <Spinner android:layout_width="wrap_content" android:layout_height="wrap_content"
                      android:layout_gravity="right" android:dropDownWidth="match_parent"/>
@@ -63,13 +74,14 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintVertical_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/relativeLayout2">
 
         <Spinner android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView4"
-                 android:layout_marginTop="0dp" android:layout_alignParentTop="true"
-                 android:layout_alignParentEnd="true" android:layout_marginEnd="293dp"
-                 android:layout_alignParentStart="true" android:layout_marginStart="0dp"
-                 android:layout_marginBottom="0dp" android:layout_alignBottom="@+id/textView4"/>
+                 android:layout_marginTop="3dp" android:layout_alignParentTop="true"
+                 android:layout_alignParentEnd="true" android:layout_marginEnd="285dp"
+                 android:layout_alignParentStart="true" android:layout_marginStart="8dp"
+        />
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

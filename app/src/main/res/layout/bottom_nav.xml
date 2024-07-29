@@ -19,9 +19,10 @@
                 android:layout_height="wrap_content" android:id="@+id/homeNavigation"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:icon="@drawable/home" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                app:iconTint="@color/button_icon_tint_selector"
+                app:iconSize="20dp" android:background="@android:color/transparent"
                 android:textSize="16sp"
-                android:textColor="#424141"/>
+                android:textColor="@color/button_text_tint_selector"/>
         <Button
                 android:text="History"
                 android:layout_width="wrap_content"
@@ -31,10 +32,11 @@
                 app:layout_constraintHorizontal_bias="0.044"
                 app:layout_constraintVertical_bias="0.483" app:icon="@drawable/transaction_history"
                 app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
+                app:iconTint="@color/button_icon_tint_selector"
+                app:iconSize="20dp" android:background="@android:color/transparent"
                 android:textSize="16sp"
                 android:onClick="nextScreen"
-                android:textColor="#424141"/>
+                android:textColor="@color/button_text_tint_selector"/>
         <Button
                 android:text="More"
                 android:layout_width="wrap_content"
@@ -45,8 +47,9 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.516"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.095" app:icon="@drawable/more_pay" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
-                android:textColor="#424141"/>
+                app:iconTint="@color/button_icon_tint_selector"
+                app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textColor="@color/button_text_tint_selector"/>
         <Button
                 android:text="Account"
                 android:layout_width="wrap_content"
@@ -56,7 +59,8 @@
                 app:layout_constraintStart_toEndOf="@+id/morePay" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" app:icon="@drawable/my_account" app:iconGravity="top"
-                app:iconTint="#414040" app:iconSize="20dp" android:background="@android:color/transparent"
-                android:textColor="#424141"/>
+                app:iconTint="@color/button_icon_tint_selector"
+                app:iconSize="20dp" android:background="@android:color/transparent"
+                android:textColor="@color/button_text_tint_selector"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
