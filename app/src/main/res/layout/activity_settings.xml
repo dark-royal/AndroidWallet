@@ -52,7 +52,7 @@
 
         <Button
                 android:text="About The Team"
-                android:layout_height="70dp" android:id="@+id/button14"
+                android:layout_height="70dp"
                 android:drawableLeft="@drawable/transaction_history"
                 android:drawableRight="@drawable/arrow"
                 android:textSize="20dp"
